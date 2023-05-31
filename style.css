@@ -12,10 +12,11 @@
     /* == Cores == */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: #695CFE;
+    --primary-color: #FF8C00;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
+    --text-body-color: #18191A;
 
     /* == Transição == */
     --tran-02: all 0.2s ease;
@@ -25,7 +26,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     background: var(--body-color);
     background: var(--tran-02);
 }
@@ -33,13 +34,12 @@ body {
 body.dark{
     --body-color: #18191A;
     --sidebar-color: #242526;
-    --primary-color: #3A383C;
+    --primary-color: #1E90FF;
     --primary-color-light: #3A383C;
     --toggle-color: #FFF;
-    --text-color: #CCC;
+    --text-color: #C0C0C0;
+    --text-body-color: #CCC;
 }
-
-
 
 /*== Sidebar ==*/
 .sidebar{
@@ -50,7 +50,7 @@ body.dark{
     width: 250px;
     padding: 10px 14px;
     background: var(--sidebar-color);
-    transition: var(--tran-05);
+    transition: var(--tran-02);
     z-index: 100;
 }
 
@@ -261,7 +261,7 @@ body.dark .menu-bar .mode i.moon{
 }
 
 body.dark .switch::before{
-    left: 24px;
+    left: 25px;
 }
 
 .home{
@@ -288,9 +288,8 @@ body.dark .switch::before{
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 75px;
+    padding: 65px;
     transition: var(--tran-03);
-
 }
 
 .grid-container .img-receita{
@@ -298,11 +297,18 @@ body.dark .switch::before{
 }
 
 .grid-container .texto-imagem{
+    display: flex;
     justify-content: center;
+    color: var(--text-body-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container .texto-imagem:hover{
+    transition: var(--tran-02);
     color: var(--text-color);
 }
 
 .grid-container .img-receita:hover{
     transition: var(--tran-03);
-    transform: scale(1.5)
+    transform: scale(1.25);
 }
